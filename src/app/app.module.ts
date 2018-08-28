@@ -2,7 +2,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
-import { FileUploader } from "carbon-components";
+// import { FileUploader } from "/node_modules/carbon-components/scss/components/file-uploader";
+import { FileUploader } from "node_modules/carbon-components";
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,5 +15,5 @@ export class AppModule {}
 
 // let fileUploaderInstance =
 
-FileUploader.create(document.getElementById("my-file"));
+// FileUploader.create(document.getElementById("my-file"));
 // fileUploaderInstance.setState("complete", 1);
