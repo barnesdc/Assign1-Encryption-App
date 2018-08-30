@@ -1,19 +1,26 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, ViewChild } from "@angular/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from "./app.component";
-// import { FileUploader } from "/node_modules/carbon-components/scss/components/file-uploader";
-import { FileUploader } from "node_modules/carbon-components";
+import { FileUploadModule } from "primeng/fileupload";
+import { InputTextModule } from "primeng/inputtext";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FileUploadModule,
+    InputTextModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
-
-// let fileUploaderInstance =
-
-// FileUploader.create(document.getElementById("my-file"));
-// fileUploaderInstance.setState("complete", 1);
+export class AppModule {
+  // @ViewChild("fileInput")
+  // fileInput: FileUpload;
+  // startUpload() {
+  //   this.fileInput.upload();
+  // }
+}
